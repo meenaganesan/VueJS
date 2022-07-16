@@ -62,7 +62,7 @@ export default {
 					'Content-Type' :'application/json'
 				},
 				body: JSON.stringify({
-					bookId: this.bookData.id,
+					bookId: this.bookData._id,
 					emailId: this.email
 				})
 			})
@@ -89,7 +89,7 @@ export default {
 					'Content-Type' :'application/json'
 				},
 				body: JSON.stringify({
-					bookId: this.bookData.id,
+					bookId: this.bookData._id,
 					emailId: this.email
 				})
 			})
@@ -130,7 +130,7 @@ export default {
 				headers: {
 					'Content-Type': 'application/json'
 				},
-				body: JSON.stringify({ bookId: this.bookData.id, emailId: this.email })
+				body: JSON.stringify({ bookId: this.bookData._id, emailId: this.email })
 			})
 			.then((response) => { return response.json() })
 			.then((result) => {
